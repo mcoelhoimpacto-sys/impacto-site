@@ -1,0 +1,9 @@
+{
+  "name": "Impacto Serviços",
+  "short_name": "Impacto",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#062e5e",
+  "icons": [{"src":"/favicon.png","sizes":"64x64","type":"image/png"}]
+}

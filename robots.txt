@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://isimpacto.com.br/sitemap.xml
