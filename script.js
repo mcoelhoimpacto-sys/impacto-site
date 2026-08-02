@@ -94,7 +94,7 @@
       status.textContent = 'Abrindo seu aplicativo de e-mail…';
     }
 
-    window.location.href = `mailto:mcoelho.adm@isimpacto.com.br?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:administrativo@isimpacto.com.br?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   });
 
   const jobForm = document.getElementById('job-application-form');

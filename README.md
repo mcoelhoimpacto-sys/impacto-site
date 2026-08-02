@@ -35,7 +35,7 @@ O projeto é um site estático. Na tela de configuração da Vercel:
 
 A solicitação de proposta abre o aplicativo de e-mail do visitante e envia para:
 
-`mcoelho.adm@isimpacto.com.br`
+`administrativo@isimpacto.com.br`
 
 Para receber formulários diretamente no site, sem abrir o e-mail do visitante, será necessário configurar posteriormente um serviço de formulário ou uma função de servidor.
 

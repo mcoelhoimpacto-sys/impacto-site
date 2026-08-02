@@ -604,3 +604,72 @@ p { color: var(--muted); }
   .certificate-lead, .certificate-text { font-size: .94rem; }
   .certificate-explainer { padding: 24px; }
 }
+
+/* Novas frentes de atuação */
+.service-expansion-heading { margin-top: 72px; }
+.service-expansion-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.service-expansion-card {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+.service-expansion-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(0,166,90,.38);
+  box-shadow: var(--shadow-md);
+}
+.service-expansion-card picture {
+  display: block;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--soft);
+}
+.service-expansion-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform .55s ease;
+}
+.service-expansion-card:hover img { transform: scale(1.04); }
+.service-expansion-card > div { padding: 24px; }
+.service-expansion-card h3 { color: var(--navy-900); }
+.service-expansion-card p { margin-bottom: 18px; font-size: .94rem; }
+.service-expansion-card ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--muted);
+  font-size: .9rem;
+}
+.service-expansion-card li {
+  position: relative;
+  padding-left: 22px;
+}
+.service-expansion-card li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--green-600);
+  font-weight: 900;
+}
+
+@media (max-width: 980px) {
+  .service-expansion-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .service-expansion-heading { margin-top: 50px; }
+  .service-expansion-grid { grid-template-columns: 1fr; }
+  .service-expansion-card > div { padding: 22px; }
+}
