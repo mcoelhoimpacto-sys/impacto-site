@@ -378,3 +378,223 @@ p { color: var(--muted); }
 .form-status.is-error { color: #d13f3f !important; }
 @media (max-width: 980px) { .job-page-grid { grid-template-columns: 1fr; } }
 @media (max-width: 640px) { .brand img { width: 42px; height: 42px; } .brand strong { font-size: .92rem; } .brand small { font-size: .54rem; } .page-shell { padding: calc(var(--header-h) + 20px) 0 74px; } .job-side-card, .job-form-card { padding: 22px; } }
+/* Ética e qualidade */
+.governance-section { background: linear-gradient(180deg, #ffffff 0%, #f4f8fb 100%); }
+.governance-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+.governance-card {
+  position: relative;
+  display: flex;
+  min-height: 390px;
+  flex-direction: column;
+  padding: 34px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: white;
+  box-shadow: var(--shadow-sm);
+  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+.governance-card::after {
+  content: "";
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  right: -100px;
+  bottom: -110px;
+  border-radius: 50%;
+  background: rgba(22,190,109,.09);
+}
+.governance-card:hover { transform: translateY(-6px); border-color: rgba(0,166,90,.36); box-shadow: var(--shadow-md); }
+.governance-icon {
+  display: grid;
+  width: 58px;
+  height: 58px;
+  place-items: center;
+  margin-bottom: 28px;
+  border-radius: 18px;
+  color: white;
+  background: var(--navy-900);
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+.governance-quality .governance-icon { background: linear-gradient(135deg, var(--green-600), var(--green-500)); }
+.governance-label { margin-bottom: 10px; color: var(--green-600); font-size: .75rem; font-weight: 600; letter-spacing: .13em; text-transform: uppercase; }
+.governance-card h3 { max-width: 520px; font-size: clamp(1.55rem, 3vw, 2.15rem); }
+.governance-card p { max-width: 620px; }
+.governance-card .text-link { position: relative; z-index: 1; margin-top: auto; padding-top: 20px; }
+
+/* Páginas institucionais */
+.document-hero {
+  position: relative;
+  padding: calc(var(--header-h) + 58px) 0 70px;
+  overflow: hidden;
+  color: white;
+  background: linear-gradient(135deg, var(--navy-950), var(--navy-800));
+}
+.document-hero::after {
+  content: "";
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  right: -220px;
+  bottom: -300px;
+  border-radius: 50%;
+  background: rgba(22,190,109,.18);
+  filter: blur(10px);
+}
+.document-hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.25fr .75fr; gap: 54px; align-items: center; }
+.document-hero h1 { max-width: 900px; font-size: clamp(2.55rem, 6vw, 4.8rem); }
+.document-hero p { max-width: 760px; color: rgba(255,255,255,.78); font-size: 1.08rem; }
+.document-hero .back-link { color: rgba(255,255,255,.78); }
+.document-hero .back-link:hover { color: #79f0b4; }
+.document-emblem {
+  display: grid;
+  min-height: 310px;
+  place-items: center;
+  align-content: center;
+  gap: 18px;
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: var(--radius-lg);
+  background: rgba(255,255,255,.07);
+  box-shadow: var(--shadow-md);
+  backdrop-filter: blur(10px);
+}
+.document-emblem img { width: 150px; filter: drop-shadow(0 20px 24px rgba(0,0,0,.23)); }
+.document-emblem span { color: rgba(255,255,255,.82); font-size: .82rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
+.document-section { background: var(--soft); }
+.narrow-container { max-width: 1040px; }
+.document-intro { max-width: 780px; margin-bottom: 42px; }
+.document-kicker { display: block; margin-bottom: 12px; color: var(--green-600); font-size: .76rem; font-weight: 600; letter-spacing: .13em; text-transform: uppercase; }
+.ethics-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.ethics-item {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  column-gap: 16px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 8px 24px rgba(4,39,78,.05);
+}
+.ethics-item > span {
+  grid-row: 1 / span 2;
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border-radius: 50%;
+  color: var(--green-600);
+  background: var(--green-100);
+  font-size: .78rem;
+  font-weight: 800;
+}
+.ethics-item h3 { margin-top: 7px; font-size: 1.12rem; letter-spacing: -.02em; }
+.ethics-item p { grid-column: 2; margin-bottom: 0; font-size: .91rem; }
+.ethics-statement {
+  display: grid;
+  grid-template-columns: 84px 1fr;
+  gap: 24px;
+  align-items: center;
+  margin-top: 34px;
+  padding: 34px;
+  border-radius: var(--radius-md);
+  color: white;
+  background: linear-gradient(135deg, var(--navy-950), var(--navy-800));
+  box-shadow: var(--shadow-md);
+}
+.statement-mark { color: var(--green-500); font-family: Georgia, serif; font-size: 6rem; line-height: .7; }
+.ethics-statement h2 { font-size: clamp(1.6rem, 3.5vw, 2.45rem); }
+.ethics-statement p { margin-bottom: 0; color: rgba(255,255,255,.76); }
+.document-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+
+/* Certificado institucional */
+.quality-seal {
+  display: grid;
+  width: 260px;
+  height: 260px;
+  place-items: center;
+  justify-self: center;
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 50%;
+  background: rgba(255,255,255,.06);
+  box-shadow: 0 30px 60px rgba(0,0,0,.2);
+}
+.quality-seal-inner {
+  display: grid;
+  width: 196px;
+  height: 196px;
+  place-items: center;
+  align-content: center;
+  border: 2px solid rgba(101,239,173,.75);
+  border-radius: 50%;
+  color: white;
+  background: radial-gradient(circle, rgba(22,190,109,.18), transparent 68%);
+}
+.quality-seal-inner span { display: grid; width: 52px; height: 52px; place-items: center; margin-bottom: 10px; border-radius: 50%; color: var(--navy-950); background: var(--green-500); font-size: 1.35rem; font-weight: 900; }
+.quality-seal-inner strong { font-size: .88rem; letter-spacing: .15em; }
+.quality-seal-inner small { margin-top: 5px; color: rgba(255,255,255,.65); font-size: .64rem; letter-spacing: .18em; }
+.certificate-section { background: var(--soft); }
+.certificate-layout { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(330px, .85fr); gap: 34px; align-items: start; }
+.certificate-card { padding: 14px; border-radius: 30px; background: linear-gradient(135deg, var(--navy-900), var(--green-600)); box-shadow: var(--shadow-md); }
+.certificate-border { padding: 42px; border: 1px solid rgba(6,46,94,.18); border-radius: 22px; background: #fff; }
+.certificate-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; }
+.certificate-header img { width: 170px; height: 100px; object-fit: contain; }
+.certificate-number { display: grid; justify-items: end; gap: 3px; color: var(--muted); font-size: .75rem; text-transform: uppercase; letter-spacing: .1em; }
+.certificate-number strong { color: var(--navy-900); font-size: .86rem; }
+.certificate-title { margin: 22px 0 24px; text-align: center; }
+.certificate-title > span { color: var(--green-600); font-size: .78rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; }
+.certificate-title h2 { margin-top: 8px; color: var(--navy-900); font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.2rem, 5vw, 3.75rem); font-weight: 500; letter-spacing: -.025em; }
+.certificate-lead, .certificate-text { color: #394b5f; font-family: Georgia, "Times New Roman", serif; font-size: 1.02rem; line-height: 1.75; text-align: center; }
+.certificate-pillars { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 28px 0; }
+.certificate-pillars span { padding: 8px 11px; border: 1px solid #d8e6df; border-radius: 999px; color: #284b3b; background: #f0fbf5; font-size: .76rem; font-weight: 650; }
+.certificate-meta { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 30px; padding-top: 22px; border-top: 1px solid var(--line); }
+.certificate-meta div { display: grid; gap: 4px; text-align: center; }
+.certificate-meta span { color: var(--muted); font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; }
+.certificate-meta strong { color: var(--navy-900); font-size: .82rem; }
+.status-active { color: var(--green-600) !important; }
+.certificate-signature { display: grid; justify-items: center; margin-top: 42px; text-align: center; }
+.signature-line { width: 240px; margin-bottom: 9px; border-top: 1px solid #8290a0; }
+.certificate-signature strong { color: var(--navy-900); }
+.certificate-signature span { margin-top: 3px; color: var(--muted); font-size: .76rem; }
+.certificate-explainer { padding: 30px; border: 1px solid var(--line); border-radius: var(--radius-md); background: white; box-shadow: var(--shadow-sm); }
+.certificate-explainer h2 { font-size: clamp(1.85rem, 3.5vw, 2.75rem); }
+.quality-principles { display: grid; gap: 2px; margin-top: 26px; }
+.quality-principles article { display: grid; grid-template-columns: 42px 1fr; gap: 14px; padding: 18px 0; border-top: 1px solid var(--line); }
+.quality-principles article > span { display: grid; width: 38px; height: 38px; place-items: center; border-radius: 50%; color: var(--green-600); background: var(--green-100); font-size: .75rem; font-weight: 800; }
+.quality-principles h3 { margin: 4px 0 6px; font-size: 1rem; }
+.quality-principles p { margin: 0; font-size: .88rem; }
+.certificate-disclaimer { margin-top: 24px; padding: 20px; border-left: 4px solid var(--green-500); border-radius: 0 14px 14px 0; background: #f3f8fb; }
+.certificate-disclaimer strong { display: block; margin-bottom: 7px; color: var(--navy-900); }
+.certificate-disclaimer p { margin: 0; font-size: .83rem; }
+
+@media (max-width: 980px) {
+  .governance-grid, .document-hero-grid, .certificate-layout { grid-template-columns: 1fr; }
+  .document-emblem { min-height: 240px; }
+  .quality-seal { width: 220px; height: 220px; }
+  .quality-seal-inner { width: 168px; height: 168px; }
+}
+
+@media (max-width: 640px) {
+  .governance-card { min-height: auto; padding: 26px; }
+  .document-hero { padding: calc(var(--header-h) + 38px) 0 52px; }
+  .document-emblem { min-height: 210px; }
+  .document-emblem img { width: 112px; }
+  .ethics-grid { grid-template-columns: 1fr; }
+  .ethics-item { grid-template-columns: 44px 1fr; padding: 20px; }
+  .ethics-statement { grid-template-columns: 1fr; padding: 26px; }
+  .statement-mark { font-size: 4.5rem; }
+  .document-actions { display: grid; grid-template-columns: 1fr; }
+  .document-actions .btn { width: 100%; }
+  .quality-seal { width: 190px; height: 190px; }
+  .quality-seal-inner { width: 146px; height: 146px; }
+  .certificate-card { padding: 8px; border-radius: 22px; }
+  .certificate-border { padding: 24px 18px; border-radius: 16px; }
+  .certificate-header { align-items: center; }
+  .certificate-header img { width: 126px; height: 78px; }
+  .certificate-number { font-size: .62rem; }
+  .certificate-number strong { font-size: .72rem; }
+  .certificate-meta { grid-template-columns: 1fr; gap: 14px; }
+  .certificate-title h2 { font-size: 2.25rem; }
+  .certificate-lead, .certificate-text { font-size: .94rem; }
+  .certificate-explainer { padding: 24px; }
+}
