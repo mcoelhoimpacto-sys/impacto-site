@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#062e5e" />
+  <meta name="description" content="Cadastre seu currículo na Impacto Serviços e candidate-se a vagas operacionais e administrativas." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://isimpacto.com.br/trabalhe-conosco" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Trabalhe conosco | Impacto Serviços</title>
+</head>
+<body class="inner-page">
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+  <header class="site-header" id="topo">
+    <div class="container header-inner">
+      <a class="brand" href="index.html#topo" aria-label="Impacto Serviços, início">
+        <img src="assets/images/logo-impacto.webp" alt="Impacto Serviços" width="220" height="74" />
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="menu-principal" aria-label="Navegação principal">
+        <a href="index.html#solucoes">Soluções</a>
+        <a href="index.html#impacto">A Impacto</a>
+        <a href="index.html#diferenciais">Diferenciais</a>
+        <a href="index.html#trabalhe">Trabalhe conosco</a>
+        <a href="index.html#contato">Contato</a>
+        <a class="btn btn-sm btn-primary nav-cta" href="index.html#proposta">Solicitar proposta</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo" class="page-shell">
+    <section class="page-hero">
+      <div class="container">
+        <a class="back-link" href="index.html#trabalhe">← Voltar ao site</a>
+        <span class="eyebrow">Trabalhe conosco</span>
+        <h1>Cadastre seu currículo na Impacto.</h1>
+        <p>Preencha os dados abaixo, informe a vaga pretendida e anexe seu currículo em PDF, DOC ou DOCX. O envio será encaminhado automaticamente para o e-mail da equipe responsável.</p>
+      </div>
+    </section>
+
+    <section class="page-form-section">
+      <div class="container job-page-grid">
+        <aside class="job-side-card reveal">
+          <img src="assets/images/hospital-equipe-1200.webp" alt="Equipe da Impacto em ambiente hospitalar" width="1200" height="1600" loading="lazy" />
+          <h2>O que você pode enviar</h2>
+          <p>Recebemos currículos para áreas operacionais e administrativas, tanto presenciais quanto virtuais.</p>
+          <div class="role-chips" aria-label="Cargos de interesse">
+            <span>ASG</span><span>Agente de portaria</span><span>Recepcionista</span><span>Assistente administrativo</span><span>Secretária</span><span>Encarregado</span><span>Supervisor</span><span>Assistente virtual</span>
+          </div>
+          <ul>
+            <li>Atendimento em horário comercial.</li>
+            <li>Formato aceito: PDF, DOC e DOCX.</li>
+            <li>Use telefone ou WhatsApp atualizado para retorno.</li>
+          </ul>
+        </aside>
+
+        <section class="job-form-card reveal">
+          <span class="eyebrow">Envio de currículo</span>
+          <h2>Preencha sua candidatura.</h2>
+          <p>Campos marcados são importantes para facilitar o contato da nossa equipe.</p>
+
+          <form class="job-form" id="job-application-form" action="https://formsubmit.co/ajax/mcoelho.adm@isimpacto.com.br" method="POST" enctype="multipart/form-data">
+            <input type="hidden" name="_subject" value="Novo currículo - Trabalhe Conosco - Impacto Serviços" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+
+            <div class="form-row">
+              <label>Nome completo
+                <input type="text" name="nome" autocomplete="name" required />
+              </label>
+              <label>E-mail
+                <input type="email" name="email" autocomplete="email" required />
+              </label>
+            </div>
+
+            <div class="form-row">
+              <label>Telefone ou WhatsApp
+                <input type="tel" name="telefone" autocomplete="tel" required />
+              </label>
+              <label>Cidade / UF
+                <input type="text" name="cidade" autocomplete="address-level2" required />
+              </label>
+            </div>
+
+            <div class="form-row">
+              <label>Vaga pretendida
+                <select name="vaga_pretendida" required>
+                  <option value="" selected disabled>Selecione</option>
+                  <option>ASG</option>
+                  <option>Agente de portaria</option>
+                  <option>Recepcionista</option>
+                  <option>Assistente administrativo</option>
+                  <option>Secretária</option>
+                  <option>Encarregado</option>
+                  <option>Supervisor</option>
+                  <option>Assistente virtual</option>
+                  <option>Outra</option>
+                </select>
+              </label>
+              <label>Modalidade de interesse
+                <select name="modalidade" required>
+                  <option value="" selected disabled>Selecione</option>
+                  <option>Presencial</option>
+                  <option>Virtual</option>
+                  <option>Ambas</option>
+                </select>
+              </label>
+            </div>
+
+            <label>Mensagem complementar
+              <textarea name="mensagem" rows="5" placeholder="Se quiser, informe experiências, disponibilidade, bairro/região ou qualquer observação importante."></textarea>
+            </label>
+
+            <label class="file-field">Anexar currículo
+              <input type="file" name="attachment" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required />
+              <small class="file-note">Tamanho recomendado de até 10 MB.</small>
+            </label>
+
+            <label class="consent"><input type="checkbox" required /> <span>Autorizo o envio destes dados e do meu currículo para análise da Impacto Serviços, conforme a <a href="privacidade.html">Política de Privacidade</a>.</span></label>
+
+            <button class="btn btn-primary btn-full" type="submit">Enviar currículo</button>
+            <p class="form-status" aria-live="polite"></p>
+          </form>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img class="footer-logo" src="assets/images/logo-impacto.webp" alt="Impacto Serviços" width="180" height="180" loading="lazy" />
+        <p>Terceirização e gestão de serviços operacionais e administrativos.</p>
+      </div>
+      <div>
+        <h2>Empresa</h2>
+        <p><strong>IMPACTO SERVIÇOS GERAIS LTDA</strong><br />CNPJ: 10.882.648/0001-92</p>
+        <p>Avenida das Américas, 3443<br />Bloco 3, Sala 202<br />Barra da Tijuca, Rio de Janeiro/RJ<br />CEP 20.030-021</p>
+      </div>
+      <div>
+        <h2>Contato</h2>
+        <a href="mailto:mcoelho.adm@isimpacto.com.br">mcoelho.adm@isimpacto.com.br</a>
+        <a href="https://www.instagram.com/isimpactoservicos/" target="_blank" rel="noopener noreferrer">@isimpactoservicos</a>
+        <p>Horário comercial</p>
+      </div>
+      <div>
+        <h2>Informações</h2>
+        <a href="privacidade.html">Política de Privacidade</a>
+        <a href="termos.html">Termos de Uso</a>
+        <a href="#topo">Voltar ao topo</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="current-year"></span> Impacto Serviços. Todos os direitos reservados.</span>
+      <span>Webmaster: Marcelo Coelho</span>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

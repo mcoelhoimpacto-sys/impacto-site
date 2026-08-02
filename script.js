@@ -17,6 +17,7 @@
     link.addEventListener('click', () => {
       nav.classList.remove('open');
       toggle?.setAttribute('aria-expanded', 'false');
+      toggle?.setAttribute('aria-label', 'Abrir menu');
     });
   });
 
@@ -64,11 +65,11 @@
     countElements.forEach((el) => countObserver.observe(el));
   }
 
-  const form = document.getElementById('proposal-form');
-  form?.addEventListener('submit', (event) => {
+  const proposalForm = document.getElementById('proposal-form');
+  proposalForm?.addEventListener('submit', (event) => {
     event.preventDefault();
-    if (!form.reportValidity()) return;
-    const data = new FormData(form);
+    if (!proposalForm.reportValidity()) return;
+    const data = new FormData(proposalForm);
     const subject = `Solicitação de proposta - ${data.get('empresa')}`;
     const body = [
       'Olá, equipe Impacto,',
@@ -87,9 +88,59 @@
       'Atenciosamente.'
     ].join('\n');
 
-    const status = form.querySelector('.form-status');
-    if (status) status.textContent = 'Abrindo seu aplicativo de e-mail…';
+    const status = proposalForm.querySelector('.form-status');
+    if (status) {
+      status.classList.remove('is-error', 'is-success');
+      status.textContent = 'Abrindo seu aplicativo de e-mail…';
+    }
+
     window.location.href = `mailto:mcoelho.adm@isimpacto.com.br?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  });
+
+  const jobForm = document.getElementById('job-application-form');
+  jobForm?.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    if (!jobForm.reportValidity()) return;
+
+    const status = jobForm.querySelector('.form-status');
+    const fileInput = jobForm.querySelector('input[type="file"]');
+    const file = fileInput?.files?.[0];
+
+    if (file && file.size > 10 * 1024 * 1024) {
+      if (status) {
+        status.className = 'form-status is-error';
+        status.textContent = 'O arquivo excede 10 MB. Envie um currículo menor.';
+      }
+      return;
+    }
+
+    const formData = new FormData(jobForm);
+
+    if (status) {
+      status.className = 'form-status';
+      status.textContent = 'Enviando seu currículo…';
+    }
+
+    try {
+      const response = await fetch(jobForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: { Accept: 'application/json' }
+      });
+
+      if (!response.ok) throw new Error('Falha no envio');
+
+      if (status) {
+        status.className = 'form-status is-success';
+        status.textContent = 'Currículo enviado com sucesso. Em breve a Impacto poderá entrar em contato.';
+      }
+      jobForm.reset();
+    } catch (error) {
+      if (status) {
+        status.className = 'form-status is-error';
+        status.textContent = 'Não foi possível enviar agora. Tente novamente em instantes.';
+      }
+    }
   });
 
   const year = document.getElementById('current-year');
