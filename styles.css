@@ -107,8 +107,11 @@ p { color: var(--muted); }
 }
 .site-header.scrolled { background: rgba(255,255,255,.97); border-color: var(--line); box-shadow: 0 8px 30px rgba(2,26,53,.08); backdrop-filter: blur(14px); }
 .header-inner { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-.brand { display: inline-flex; align-items: center; flex-shrink: 0; }
-.brand img { width: 220px; height: auto; object-fit: contain; }
+.brand { display: inline-flex; align-items: center; gap: 10px; flex-shrink: 0; color: var(--navy-900); }
+.brand img { width: 52px; height: 52px; object-fit: contain; flex: 0 0 auto; }
+.brand span { display: grid; line-height: 1; }
+.brand strong { color: var(--navy-900); font-size: 1.08rem; letter-spacing: .09em; }
+.brand small { margin-top: 5px; color: var(--muted); font-size: .62rem; font-weight: 700; letter-spacing: .18em; }
 .main-nav { display: flex; align-items: center; gap: 26px; color: var(--ink); font-size: .93rem; font-weight: 700; }
 .site-header.scrolled .main-nav { color: var(--ink); }
 .main-nav > a:not(.btn) { position: relative; }
@@ -299,7 +302,7 @@ p { color: var(--muted); }
   :root { --radius-md: 20px; --radius-lg: 26px; }
   body { padding-bottom: 68px; }
   .section { padding: 66px 0; }
-  .brand img { width: 180px; }
+  .brand img { width: 48px; height: 48px; }
   .hero { padding-bottom: 46px; }
   .hero-copy > p { font-size: 1rem; }
   .hero-actions { display: grid; grid-template-columns: 1fr; }
@@ -374,4 +377,4 @@ p { color: var(--muted); }
 .form-status.is-success { color: var(--green-600) !important; }
 .form-status.is-error { color: #d13f3f !important; }
 @media (max-width: 980px) { .job-page-grid { grid-template-columns: 1fr; } }
-@media (max-width: 640px) { .brand img { width: 160px; } .page-shell { padding: calc(var(--header-h) + 20px) 0 74px; } .job-side-card, .job-form-card { padding: 22px; } }
+@media (max-width: 640px) { .brand img { width: 42px; height: 42px; } .brand strong { font-size: .92rem; } .brand small { font-size: .54rem; } .page-shell { padding: calc(var(--header-h) + 20px) 0 74px; } .job-side-card, .job-form-card { padding: 22px; } }
