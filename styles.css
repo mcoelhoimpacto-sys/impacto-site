@@ -151,7 +151,6 @@ p { color: var(--muted); }
 .section-heading { max-width: 760px; margin-bottom: 42px; }
 .section-heading p { max-width: 680px; font-size: 1.05rem; }
 .solution-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; }
-.spotlight-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 22px; }
 .solution-card { display: flex; min-height: 100%; flex-direction: column; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius-md); background: white; box-shadow: var(--shadow-sm); transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
 .solution-card:hover { transform: translateY(-7px); border-color: rgba(0,166,90,.38); box-shadow: var(--shadow-md); }
 .solution-image { aspect-ratio: 4 / 5; overflow: hidden; background: var(--soft); }
@@ -160,7 +159,6 @@ p { color: var(--muted); }
 .card-hospital .solution-image img { object-position: center 10%; }
 .card-portaria .solution-image img { object-position: center 10%; }
 .card-admin .solution-image img { object-position: center top; }
-.card-manager .solution-image img { object-position: center top; }
 .solution-body { display: flex; flex: 1; flex-direction: column; padding: 26px; }
 .solution-body h3 span { display: block; margin-top: 5px; color: var(--green-600); font-size: .78em; }
 .card-number { display: block; margin-bottom: 14px; color: var(--green-600); font-size: .78rem; font-weight: 900; letter-spacing: .16em; }
@@ -291,7 +289,7 @@ p { color: var(--muted); }
   .stats-grid { grid-template-columns: repeat(2,1fr); }
   .stat:nth-child(3) { border-left: 0; border-top: 1px solid var(--line); }
   .stat:nth-child(4) { border-top: 1px solid var(--line); }
-  .solution-grid, .benefits-grid, .spotlight-grid { grid-template-columns: repeat(2,1fr); }
+  .solution-grid, .benefits-grid { grid-template-columns: repeat(2,1fr); }
   .about-grid, .careers-grid, .proposal-grid { gap: 42px; }
   .about-media { min-height: 560px; }
   .about-main { height: 560px; }
@@ -314,7 +312,7 @@ p { color: var(--muted); }
   .stat { padding: 20px 12px; }
   .stat span { font-size: .76rem; }
   .section-heading { margin-bottom: 30px; }
-  .solution-grid, .benefits-grid, .spotlight-grid, .coverage-cards, .process-list, .footer-grid, .form-row { grid-template-columns: 1fr; }
+  .solution-grid, .benefits-grid, .coverage-cards, .process-list, .footer-grid, .form-row { grid-template-columns: 1fr; }
   .solution-body { padding: 22px; }
   .solution-image { aspect-ratio: 4 / 5; }
   .about-media { min-height: 480px; }
